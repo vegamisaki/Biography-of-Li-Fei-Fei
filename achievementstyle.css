@@ -1,0 +1,116 @@
+body {
+    font-family: 'im-fell-english', 'Times New Roman', Times, 'Inter', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #111, #111, #005999); /* Black background color */
+    color: #fff; /* Text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#d1 {
+    background-color: black;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#d2 {
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+#d1:hover #d2 
+    {
+        visibility: visible;
+    }
+
+#d1:hover
+    {
+        transform: scale(1.5);
+        background-color: darkslateblue;
+
+    }
+.panel {
+    display: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.panel p {
+    margin: 0;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.2); /* More transparent white when active */
+}
+
+.timeline-item {
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item.left::after {
+    left: -10px;
+}
+.timeline-item.left {
+    left: 0;
+}
+.timeline-item.right {
+    left: 50%;
+}
+.timeline-item-content {
+    padding: 1rem;
+    background: #e6f2ff;
+    position: relative;
+    border-radius: 6px;
+}
+.timeline-item.left .timeline-item-content {
+    left: -45px;
+}
+.timeline-item.right .timeline-item-content {
+    left: 45px;
+}
+.timeline-item h3 {
+    margin-top: 0;
+    color: #005999;
+}
+.timeline-item p {
+    margin: 0.5rem 0 0 0;
+}
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 25px;
+    }
+    .timeline-item.left, .timeline-item.right {
+        left: 0;
+    }
+    .timeline-item.left::after, .timeline-item.right::after {
+        left: 15px;
+        top: -10px;
+    }
+    .timeline-item-content {
+        left: 60px !important;
+    }
+}

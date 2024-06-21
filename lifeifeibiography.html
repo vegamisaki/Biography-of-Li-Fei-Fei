@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset = "UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<meta name="keywords" content="Li Feifei Biography, Li Feifei, Feifei Li">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="stylesheetbiowork.css">
+<title>Biography of Li Fei-Fei</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Li Fei-Fei</h1>
+            <p>BIOGRAPHY</p>
+        </div>
+    </header>
+    <main class="container">
+        <div class="image-container">
+            <img src="image (28).png" alt="Li Fei-Fei">
+        </div>
+        <button class="accordion">About Li-Fei-Fei</button>
+        <div class="panel">
+            <p>Li Fei-Fei was born in Beijing, China, in October 1976. Growing up in a period of significant socio-economic change in China, Li was influenced by her academic surroundings; her father was a physics professor, and her mother worked as a nurse. From a young age, Li's family emphasized the importance of education, fostering her early interest in science and technology.</p>
+            
+            <p>At 16, Li and her family emigrated to the United States, settling in Parsippany-Troy Hills, New Jersey. The transition to a new country brought numerous challenges, including cultural adaptation and overcoming the language barrier. Enrolled in Parsippany High School, Li initially struggled with English and was placed in an ESL (English as a Second Language) program. Despite these hurdles, her determination and academic prowess shone through as she quickly adapted and excelled in her studies.</p>
+        </div>
+
+        <button class="accordion">Personal Life</button>
+        <div class="panel">
+            <p>Outside of her professional work, Li enjoys photography and traveling, which align with her lifelong interest in capturing and understanding the visual world.</p>
+            
+            <p>Li Fei-Fei's contributions to artificial intelligence, particularly in the realm of computer vision, have been transformative. Her work on the ImageNet project has driven significant advancements in how machines interpret visual data. As a leading advocate for ethical AI, she continues to influence the direction of AI research and development, promoting a vision of AI that is inclusive, responsible, and centered on human well-being.</p>
+            
+            <p>Li Fei-Fei's journey from Beijing to becoming a pioneering figure in AI highlights the power of perseverance, curiosity, and a deep commitment to making a positive impact through technology.</p>
+        </div>
+
+    </main>
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                let panel = button.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
