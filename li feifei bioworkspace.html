@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset = "UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<meta name="keywords" content="Li Feifei Biography, Li Feifei, Feifei Li">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="stylesheetbiowork.css">
+<title>Biography of Li Fei-Fei</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Li Fei-Fei</h1>
+            <p>EARLY LIFE AND EDUCATION</p>
+        </div>
+    </header>
+    <main class="container">
+        <div class="image-container">
+            <img src="image (28).png" alt="Li Fei-Fei">
+        </div>
+        <button class="accordion">About Li-Fei-Fei</button>
+        <div class="panel">
+            <ul>
+                <li>Name: Li Fei-Fei (李飛飛)</li>
+                <li>Age: 47</li>
+                <li>Nationality: American</li>
+            </ul>
+            <p>Li Fei-Fei is a renowned computer scientist known for her pioneering work in the field of artificial intelligence (AI). She is a professor at Stanford University and co-director of the Stanford Human-Centered AI Institute. Her research focuses on machine learning, computer vision, and cognitive neuroscience.</p>
+        </div>
+
+        <button class="accordion">Education</button>
+        <div class="panel">
+            <p>Ph.D. (Honorary), Harvey Mudd College, Engineering (2022), B.A., Princeton University, Physics (1999), Master, California Institute of Technology, Electrical Engineering (2001), PhD, California Institute of Technology, Electrical Engineering (2005)</p>
+        </div>
+
+        <button class="accordion">Occupation</button>
+        <div class="panel">
+            <ul>
+                <li>Sequoia Professor in Computer Science department, Stanford University</li>
+                <li>Founding and Co-director of Stanford HAI</li>
+                <li>Director of Stanford’s AI Lab (2013-2018)</li>
+                <li>Vice president of Google (2017-2018)</li>
+                <li>Chief scientist of AI/ML at Google Cloud (2017-2018)</li>
+                <li>Co-founder and chairman of AI4ALL</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                let panel = button.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
